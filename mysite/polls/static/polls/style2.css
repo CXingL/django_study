@@ -1,0 +1,789 @@
+body {
+    background-image: url("images/topBG.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.header-content-pc {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding-bottom: 5.2%;
+    z-index: 3;
+    font: black;
+}
+
+.icon {
+    display: inline-block;
+    background: url("images/x.png");
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    width: 42px;
+    height: 40px;
+}
+
+.nav {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    right: 6%;
+    width: 60%;
+    font-family: "SF NS Regular";
+    color: #333333;
+    font-size: 0; /* 清理inline-block导致的间隙*/
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2vw;
+    font-weight: 200;
+    list-style-type: none;
+    float: left;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.nav #nav-home {
+    color: #2DC9CA;
+    border-bottom: 2px solid #2DC9CA;
+}
+
+.nav a {
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.nav a#nav-normal:hover {
+    color: #2DC9CA;
+    border-bottom: 2px solid #2DC9CA;
+}
+
+.nav a#nav-login:hover {
+    color: #FFCB00;
+}
+
+.nav a#nav-try:hover {
+    color: black;
+    background-color: #FFCB00;
+    font-weight: 1;
+}
+
+.nav li:nth-child(6) {
+    margin-left: 12%;
+}
+
+.nav li:nth-child(7) {
+    margin-top: -0.8%;
+    margin-left: 0;
+}
+
+.tryitfree {
+    width: 130%;
+    line-height: 210%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #FFCB00;
+    border-radius: 25px;
+    margin-left: 30%;
+}
+
+.video-div {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
+.font46 {
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    word-wrap: break-word;
+    word-break: normal;
+    width: 40%;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+.font20 {
+    color: white;
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    letter-spacing: 1px;
+    font-weight: 150;
+}
+
+.sign-box {
+    background-color: white;
+    color: #55CEE0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 32%;
+    height: 30%;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+
+input[type=email] {
+    width: 66%;
+    height: 12%;
+    position: absolute;
+    top: 40%;
+    padding-left: 2%;
+    color: gray;
+    opacity: .8;
+}
+
+input[type=password] {
+    width: 66%;
+    height: 12%;
+    position: absolute;
+    top: 65%;
+    padding-left: 2%;
+    color: gray;
+    opacity: .8;
+}
+
+input[type=submit]#regist {
+    background: url("images/tryitfree.png");
+    position: absolute;
+    left: 65%;
+    top: 75%;
+    width: 30%;
+    height: 40%;
+    border-width: 0;
+}
+
+input[type=submit]#login {
+    position: absolute;
+    left: 15%;
+    top: 85%;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.4vw;
+    position: absolute;
+    right: 25%;
+    top: 55%;
+}
+
+.box-footer {
+    border: 0px solid white;
+    padding: 0 20px;
+    background: white;
+    width: calc(100% - 100px);
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    top: 90%;
+    left: 1.5%;
+}
+
+.banner {
+    background: white;
+    height: 0;
+    width: 100%;
+    padding-bottom: 49.96%;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-container {
+    position: absolute;
+    width: 71%;
+    height: 60%;
+    overflow: initial;
+}
+
+.swiper-wrapper {
+    transition-timing-function: ease-in-out;
+}
+
+.swiper-slide img {
+    width: 40%;
+    position: absolute;
+    top: 10%;
+}
+
+.swiper-pagination-bullet {
+    margin:10px 13px;
+    height: 20px;
+    width: 20px;
+} 
+
+.swiper-slide #swipe-p1 {
+    position: absolute;
+    left: 45%;
+    top: 5%;
+    width: 35%;
+    font-size: 1.6vw;
+}
+
+.swiper-slide #swipe-p2 {
+    position: absolute;
+    color: #798293;
+    left: 45%;
+    top: 44%;
+    width: 40%;
+    font-size: .8vw;
+}
+
+.swiper-slide #swipe-p3 {
+    position: absolute;
+    left: 45%;
+    top: 65%;
+    width: 70%;
+    font-size: 1vw;
+}
+
+.banner .ball1 {
+    width: 35%;
+    height: 0;
+    padding-bottom: 35%;
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    top: -70px;
+    background: #55CEE0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;    
+}
+
+.banner .ball2 {
+    width: 18.28%;
+    padding-bottom: 18.28%;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+    right: -40px;
+    bottom: -90px;
+    background: #55CEE0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.benefits{
+    background: #F5F5F5;
+    height: 0;
+    width: 100%;
+    padding-bottom: 125.9%;
+    position: relative;
+    overflow: hidden;
+}
+
+.font46-benefits {
+    position: absolute;
+    top: 1%;
+    left: 18.8%;
+    word-wrap: break-word;
+    word-break: normal;
+    font-weight: normal;
+    width: 15%;
+    font-size: 2.2vw;
+}
+
+.benefits-icon1 {
+    background: white;
+    width: 30.2%;
+    padding-bottom: 30.2%;
+    height: 0;
+    position: absolute;
+    left: 16.7%;
+    top: 10%;
+    box-shadow: 0 0 50px -20px #888888;
+    overflow: scroll;
+}
+
+.benefits-icon2 {
+    width: 30.2%;
+    padding-bottom: 30.2%;
+    height: 0;
+    position: absolute;
+    right: 16.9%;
+    top: 10%;
+    overflow: scroll;
+}
+
+.benefits-icon3 {
+    width: 30.2%;
+    padding-bottom: 30.2%;
+    height: 0;
+    position: absolute;
+    left: 16.9%;
+    top: 35%;
+    overflow: scroll;
+}
+
+.benefits-icon4 {
+    background: white;
+    width: 30.2%;
+    padding-bottom: 30.2%;
+    height: 0;
+    position: absolute;
+    right: 16.7%;
+    top: 35%;
+    box-shadow: 0 0 50px -20px #888888;
+    overflow: scroll;
+}
+
+.benefits-icon5 {
+    background: white;
+    width: 30.2%;
+    padding-bottom: 30.2%;
+    height: 0;
+    position: absolute;
+    left: 16.7%;
+    top: 60%;
+    box-shadow: 0 0 50px -20px #888888;
+    overflow: scroll;
+}
+
+.benefits-icon6 {
+    width: 30.2%;
+    padding-bottom: 30.2%;
+    height: 0;
+    position: absolute;
+    right: 16.9%;
+    top: 60%;
+    overflow: scroll;
+}
+
+
+#benefits-icon {
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    width: 26.8%;
+    height: 27.3%;
+}
+
+.benefits-p1 {
+    font-size: 30;
+    position: absolute;
+    top: 42.9%;
+    left: 12.5%;
+}
+
+.benefits-p2 {
+    font-size: 8px;
+    color: #798293;
+    position: absolute;
+    top: 67.8%;
+    left: 12.5%;
+}
+
+.get-icon {
+    background: #FFC80A;
+    width: 11.29%;
+    padding-bottom: 3.118%;
+    height: 0;
+    position: absolute;
+    margin: auto;
+    top: 80%; left: 0; bottom: 0; right: 0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    line-height: 250%;
+    cursor: pointer;
+    font-size: 1.2vw;
+}
+
+.download-list #get-icon1 {
+    background: url("images/Group 6.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 41.32%;
+    top: 93%;
+    width: 1.5%;
+    padding-bottom: 1.7%;
+}
+
+.download-list #get-icon2 {
+    background: url("images/Group 10.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 46.32%;
+    top: 93%;
+    width: 1.5%;
+    padding-bottom: 1.7%;
+}
+
+.download-list #get-icon3 {
+    background: url("images/Group 11.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 46.32%;
+    top: 93%;
+    width: 1.5%;
+    padding-bottom: 1.7%;
+}
+
+.download-list #get-icon4 {
+    background: url("images/Group 12.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 41.32%;
+    top: 93%;
+    width: 1.5%;
+    padding-bottom: 1.7%;
+}
+
+.customer-reviews {
+    background: white;
+    height: 0;
+    width: 100%;
+    padding-bottom: 44%;
+    position: relative;
+    overflow: hidden;
+}
+
+.font46-reviews {
+    position: absolute;
+    top: 1%;
+    left: 18.8%;
+    word-wrap: break-word;
+    word-break: normal;
+    font-weight: normal;
+    width: 20%;
+    font-size: 2.2vw;
+}
+
+.reviews-box1 {
+    background: white;
+    width: 19.35%;
+    padding-bottom: 26.02%;
+    height: 0;
+    position: absolute;
+    left: 17%;
+    top: 29.27%;
+    box-shadow: 0 0 50px -10px #888888;
+}
+
+.customer-reviews #review-box:hover {
+    width: 20.5%;
+    padding-bottom: 27.5%;
+    transition: 1s;
+}
+
+.reviews-box2 {
+    background: white;
+    width: 19.35%;
+    padding-bottom: 26.02%;
+    height: 0;
+    position: absolute;
+    left: 40.5%;
+    top: 29.27%;
+    box-shadow: 0 0 50px -10px #888888;
+}
+
+.reviews-box3 {
+    background: white;
+    width: 19.35%;
+    padding-bottom: 26.02%;
+    height: 0;
+    position: absolute;
+    right: 17%;
+    top: 29.27%;
+    box-shadow: 0 0 50px -10px #888888;
+}
+
+#reviews-img {
+    position: absolute;
+    top: -5%;
+    left: 10%;
+    width: 13.33%;
+}
+
+#reviews-name {
+    color: #798293;
+    font-size: 1vw;
+    position: absolute;
+    left: 10%;
+    top: 8%;
+}
+
+#reviews-country {
+    font-size: 1.2vw;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+
+}
+
+#reviews-content {
+    font-size: 1vw;
+    position: absolute;
+    left: 0;
+    top: 28%;
+    margin: 10%;
+}
+
+.download {
+    background: #F5F5F5;
+    height: 0;
+    width: 100%;
+    padding-bottom: 44%;
+    position: relative;
+    overflow: hidden;
+}
+
+.font46-download {
+    position: absolute;
+    top: 1%;
+    left: 18.8%;
+    word-wrap: break-word;
+    word-break: normal;
+    font-weight: normal;
+    width: 20%;
+    font-size: 2.2vw;
+}
+
+.download-text {
+    color: #798293;
+    position: absolute;
+    top: 18%;
+    left: 18.8%;
+    word-wrap: break-word;
+    word-break: normal;
+    font-weight: normal;
+    width: 60%;
+    font-size: 1.5vw;
+}
+
+.download-icon1 {
+    position: absolute;
+    top: 51%;
+    left: 20%;
+    width: 10%;
+    text-align: center;
+}
+
+.download-icon2 {
+    position: absolute;
+    top: 51%;
+    left: 36.5%;
+    width: 10%;
+    text-align: center;
+}
+
+.download-icon3 {
+    position: absolute;
+    top: 51%;
+    right: 36.5%;
+    width: 10%;
+    text-align: center;
+}
+
+.download-icon4 {
+    position: absolute;
+    top: 51%;
+    right: 20%;
+    width: 10%;
+    text-align: center;
+}
+
+.download-link {
+    text-decoration: none;
+    color: #798293;
+}
+
+#download-icon {
+    width: 50%;
+}
+
+.download-icon3 #download-icon {
+    width: 39%;
+}
+
+.download-icon4 #download-icon {
+    width: 31%;
+}
+
+#download-text2 {
+    border: 1px solid #798293;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.download-link:hover #download-text2 {
+    background: #FFC80A;
+    color: white;
+    border: none;
+}
+
+.download-learnmore {
+    color: #2AA2EE;
+    text-decoration: none;
+    position: absolute;
+    top: 86%;
+    left: 45%;
+    font-size: 1.8vw;
+}
+
+.dont-miss-more {
+    width: 100%;
+    height: 0;
+    padding-bottom: 31.4%;
+    position: relative;
+    overflow: hidden;
+}
+
+.font46-more {
+    position: absolute;
+    top: 1%;
+    left: 18.8%;
+    word-wrap: break-word;
+    word-break: normal;
+    font-weight: normal;
+    width: 15%;
+    font-size: 2.2vw;
+}
+
+.more-text {
+    position: absolute;
+    top: 28%;
+    left: 18.8%;
+    color: #798293;
+    font-size: 1.5vw;
+}
+
+.social-icon1 {
+    position: absolute;
+    top: 51%;
+    left: 20%;
+    width: 10%;
+    text-align: center;
+}
+
+.social-icon2 {
+    position: absolute;
+    top: 51%;
+    left: 36.5%;
+    width: 10%;
+    text-align: center;
+}
+.social-icon3 {
+    position: absolute;
+    top: 51%;
+    right: 36.5%;
+    width: 10%;
+    text-align: center;
+}
+.social-icon4 {
+    position: absolute;
+    top: 51%;
+    right: 20%;
+    width: 10%;
+    text-align: center;
+}
+
+#social-icon {
+    width: 90%;
+}
+
+#social-text {
+    position: absolute;
+    top: 55%;
+    font-size: 0.8vw;
+    color: white;
+    left: 20%;
+    overflow: hidden;
+}
+
+.footer-page {
+    background: #F5F5F5;
+    height: 0;
+    width: 100%;
+    padding-bottom: 19.3%;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-icon {
+    position: absolute;
+    top: 13.9%;
+    left: 19.9%;
+    width: 7.74%;
+}
+
+ul, li {
+    list-style: none;
+    line-height: 150%;
+    font-size: 1vw;
+}
+
+.index li a {
+    text-decoration: none;
+    color: #798293;
+    font-size: 0.5vw;
+}
+
+.index {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 55px;
+    margin-bottom: 30px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.index#products {
+    position: absolute;
+    top: 13.9%;
+    left: 33%;
+}
+
+.index#tools {
+    position: absolute;
+    top: 13.9%;
+    left: 44%;
+}
+
+.index#others {
+    position: absolute;
+    top: 13.9%;
+    left: 55%;
+}
+
+.index#legal {
+    position: absolute;
+    top: 13.9%;
+    left: 66%;
+}
+
+.index#help {
+    position: absolute;
+    top: 13.9%;
+    left: 77%;
+}
+
+.cut-off-line {
+    background: #6C6C6C;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 80%;
+    opacity: 0.3;
+}
+
+.copyright {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    font-size: 1vw;
+    color: #333333;
+    opacity: 0.5;
+}

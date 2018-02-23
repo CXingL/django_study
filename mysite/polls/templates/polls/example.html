@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+<style>
+</style>
+</head>
+
+<body>
+    
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style2.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="/static/polls/swiper-3.4.2.min.css">
+    <nav class="header-contain" id="header-contain">
+        <div class="header-content-pc" id="header-content-pc">
+            <a class="icon" href="/polls/example"></a>
+            <ul class="nav clearfix font18">
+                <li>
+                    <a class="active" id="nav-normal" onclick="navClick(this)">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="active" id="nav-normal" onclick="navClick(this)">
+                        Download 
+                    </a>
+                </li>
+                <li>
+                    <a class="active" id="nav-normal" onclick="navClick(this)">
+                        Pricing 
+                    </a>
+                </li>
+                <li>
+                    <a class="active" id="nav-normal" onclick="navClick(this)">
+                        Blog 
+                    </a>
+                </li>
+                <li>
+                    <a class="active" id="nav-normal" onclick="navClick(this)">
+                        Help 
+                    </a>
+                </li>
+                <li>
+                    <a class="active" id="nav-login" href="/polls">
+                        Log In 
+                    </a>
+                </li>
+                <li>
+                    <a class="tryitfree" id="nav-try" href="/polls">
+                        Try it Free 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="video-div">
+        <img src="/static/polls/images/Group 3.png">
+    </div>
+
+    <div class>
+        <h1 class="font46">Unblock the world fast, securely and anonmously</h1>
+        <h5 class="font20">FREE forever for Android & iOS</h5>
+    </div>
+
+    <div class="sign-box">
+        <h2 class="font21">SIGN UP TO GET FREE TRIAL</h2>
+        <form method = 'post'>
+                {% csrf_token %}
+                <input type="email" name="username" placeholder="Enter your Email here">
+                <span class="error-msg">{{ error_msg }}</span>
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" name="regist" value="" id="regist">
+                <input type="submit" name="login" value="login" id="login">
+        </form>
+    </div>
+
+    <div class="box-footer" id="box-footer">
+        <div class="banner">
+            <div class="swiper">
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/static/polls/images/one.png">
+                            <p id="swipe-p1">How to stay connected with your friends & families on restricted WiFi?</p>
+                            <p id="swipe-p2">Networks in workplaces, schools might have certain social networking apps/sites blocked;<br>And in some countries, many video call & instant message app does not work.</p>
+                            <p id="swipe-p3">Just tap connect button in X-VPN,<br>Have everything unblocked.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/static/polls/images/Two.png">
+                            <p id="swipe-p1">How to access your favorite TV series, movies & music abroad?</p>
+                            <p id="swipe-p2">Due to Geo-restrictions,<br>Many TV series, movies and music are not available in a different region.</p>
+                            <p id="swipe-p3">Change your virtual location in X-VPN,<br>Say no to “Not available”!</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/static/polls/images/Three.png">
+                            <p id="swipe-p1">How to protect your sensitive information and privacy online?</p>
+                            <p id="swipe-p2">Even a password-secured network cannot not guarantee your online security;<br>Snoopers and ISPs are eavesdropping on your internet activities constantly.</p>
+                            <p id="swipe-p3">Protect your sensitive information with X-VPN,<br>Stay private online!</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/static/polls/images/Four.png">
+                            <p id="swipe-p1">How to stay safe on public WiFi networks?</p>
+                            <p id="swipe-p2">While using public WiFi from Mall, coffee shop, your personal information are at risk as anyone might grab those information easily.</p>
+                            <p id="swipe-p3">Connect in X-VPN on public WiFi,<br>Have a peace of mind.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+
+
+                </div>
+            </div>
+
+
+            <div class="ball1"></div>
+            <div class="ball2"></div>
+        </div>
+
+        <div class="benefits" id="benefits">
+            <h2 class="font46-benefits">Benefits of X-VPN</h2>
+
+            <div class="benefits-icon1">
+                <img id="benefits-icon" src="/static/polls/images/icon_content1.png">
+                <p class="benefits-p1">Protect your sensitive and private information</p>
+                <p class="benefits-p2">Secure your internet data with 256-bit encryption<br>Bank-grade multi-layered encryption technology<br>Choices of 7 types of security tunnels</p>
+            </div>
+
+            <div class="benefits-icon2">
+                <img id="benefits-icon" src="/static/polls/images/icon_content2.png">
+                <p class="benefits-p1">Unblock streaming & social networking apps/sites at your office, school & abroad</p>
+                <p class="benefits-p2">7 protocols to help you bypass filters and firewalls<br>Unblock YouTube, Netflix, Spotify and other streaming contents<br>Gain access to Facebook, Twitter, Snapchats and many other Apps</p>
+            </div>
+
+            <div class="benefits-icon3">
+                <img id="benefits-icon" src="/static/polls/images/icon_content3.png">
+                <p class="benefits-p1">Stay anonymous while surfing</p>
+                <p class="benefits-p2">Strict no logs policy<br>Does not require account to use VPN service<br>Mask your actual internet visit request as regular internet data</p>
+            </div>
+
+            <div class="benefits-icon4">
+                <img id="benefits-icon" src="/static/polls/images/icon_content4.png">
+                <p class="benefits-p1">Set your virtual location anywhere in the world</p>
+                <p class="benefits-p2">7 protocols to help you bypass filters and firewalls<br>Unblock YouTube, Netflix, Spotify and other streaming contents<br>Gain access to Facebook, Twitter, Snapchats and many other Apps</p>
+            </div>
+
+            <div class="benefits-icon5">
+                <img id="benefits-icon" src="/static/polls/images/icon_content5.png">
+                <p class="benefits-p1">Faster and more stable connection</p>
+                <p class="benefits-p2">7 protocols to help you bypass filters and firewalls<br>Unblock YouTube, Netflix, Spotify and other streaming contents<br>Gain access to Facebook, Twitter, Snapchats and many other Apps</p>
+            </div>
+
+            <div class="benefits-icon6">
+                <img id="benefits-icon" src="/static/polls/images/icon_content6.png">
+                <p class="benefits-p1">Hassle free, Easy to use</p>
+                <p class="benefits-p2">7 protocols to help you bypass filters and firewalls<br>Unblock YouTube, Netflix, Spotify and other streaming contents<br>Gain access to Facebook, Twitter, Snapchats and many other Apps</p>
+            </div>
+
+            <div>
+                <a class="get-icon" href="/polls">Get X-VPN</a>
+            </div>
+
+            <div class="download-list">
+                <a id="get-icon1" href="/polls"></a>
+                <a id="get-icon2" href="/polls"></a>
+                <a id="get-icon3" href="/polls"></a>
+                <a id="get-icon4" href="/polls"></a>
+            </div>
+        </div>
+        
+        <div class="customer-reviews" id="customer-reviews">
+            <h1 class="font46-reviews">Customer reviews of X-VPN</h1>
+
+            <div class="reviews-box1" id="review-box">
+                <img id="reviews-img" src="/static/polls/images/Mask1.png">
+                <p id="reviews-name">Sarah</p>
+                <p id="reviews-country">From the USA</p>
+                <p id="reviews-content">
+                    <span style="color: #0C80FB">THis is the easlest app to install and use, </span>
+                    <span>once installed it goes to work and you don't need to do anything, great app.</span>
+                </p>
+            </div>
+
+            <div class="reviews-box2" id="review-box">
+                <img id="reviews-img" src="/static/polls/images/Mask2.png">
+                <p id="reviews-name">Mohammad</p>
+                <p id="reviews-country">From Saudi Arabia</p>
+                <p id="reviews-content">
+                    <span style="color: #0C80FB">In my opinion, one of the best free VPN services </span>
+                    <span>for mobile and also extremely underrated for such an amazing app.Not only does it allow location preferences, however it's features work just as well as paid alternatives.</span>
+                </p>                                
+            </div>
+
+            <div class="reviews-box3" id="review-box">
+                <img id="reviews-img" src="/static/polls/images/Mask3.png">
+                <p id="reviews-name">Reginald</p>
+                <p id="reviews-country">From South Africa</p>
+                <p id="reviews-content">
+                    <span style="color: #0C80FB">This app is amazing at school. I can finally use Snapchat, Instagram, and everything. </span>
+                    <span>I couldn't use when I had school wifi so now I don't have to use my data.</span>
+                </p>                
+            </div>            
+        </div>
+
+        <div class="download" id="download">
+            <h1 class="font46-download">Download X-VPN, it is Free!</h1>
+            <p class="download-text">Free forever, Unlimited bandwidth and No pop Ads, Only for the first 10000 new users for iOS and Android</p>
+
+            <div class="download-icon1">
+                <a class="download-link" href="/polls">
+                <img id="download-icon" src="/static/polls/images/Group 25.png">
+                <p id="download-text1">Win</p>
+                <p id="download-text2">Download</p>
+                </a>
+            </div>
+
+            <div class="download-icon2">
+                <a class="download-link" href="/polls">
+                <img id="download-icon" src="/static/polls/images/Group 24.png">
+                <p id="download-text1">Mac</p>
+                <p id="download-text2">Download</p>
+                </a>
+            </div>
+
+            <div class="download-icon3">
+                <a class="download-link" href="/polls">
+                <img id="download-icon" src="/static/polls/images/Shape1.png">
+                <p id="download-text1">iOS</p>
+                <p id="download-text2">Download</p>
+                </a>
+            </div>
+
+            <div class="download-icon4">
+                <a class="download-link" href="/polls">
+                <img id="download-icon" src="/static/polls/images/Shape2.png">
+                <p id="download-text1">Android</p>
+                <p id="download-text2">Download</p>
+                </a>
+            </div>
+
+            <a class="download-learnmore" href="/polls">Learn More</a>
+        </div>    
+
+        <div class="dont-miss-more" id="dont-miss-more">
+            <p class="font46-more">Don't miss more</p>
+            <p class="more-text">Follow us for all the latest news, tips and updates.</p>
+
+            <div class="social-icon1">
+                <a class="socila-link" href="/polls">
+                <img id="social-icon" src="/static/polls/images/tt.png">
+                <p id="social-text">Twitter</p>
+                </a>
+            </div>
+
+            <div class="social-icon2">
+                <a class="socila-link" href="/polls">
+                <img id="social-icon" src="/static/polls/images/fb.png">
+                <p id="social-text">Facebook</p>
+                </a>
+            </div>
+
+            <div class="social-icon3">
+                <a class="socila-link" href="/polls">
+                <img id="social-icon" src="/static/polls/images/yt.png">
+                <p id="social-text">YouTube</p>
+                </a>
+            </div>
+
+            <div class="social-icon4">
+                <a class="socila-link" href="/polls">
+                <img id="social-icon" src="/static/polls/images/email.png">
+                <p id="social-text">support@xvpn.io</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-page">
+            <div>
+                <img class="footer-icon" src="/static/polls/images/icon.png" href="/polls">
+            </div>
+
+            <ur class="index" id="products">
+                <li>Products</li>
+                <li>
+                    <a href="/polls">VPN for Windows</a>
+                </li>
+                <li>
+                    <a href="/polls">VPN for Mac</a>
+                </li>
+                <li>
+                    <a href="/polls">VPN for iOS</a>
+                </li>
+                <li>
+                    <a href="/polls">VPN for Android</a>
+                </li>                
+            </ur>
+
+            <ur class="index" id="tools">
+                <li>Tools</li>
+                <li>
+                    <a href="/polls">IP Checker</a>
+                </li>
+            </ur>
+
+            <ur class="index" id="others">
+                <li>Others</li>
+                <li>
+                    <a href="/polls">Download</a>
+                </li>
+                <li>
+                    <a href="/polls">Pricing</a>
+                </li>
+                <li>
+                    <a href="/polls">Blog</a>
+                </li>
+            </ur>
+
+            <ur class="index" id="legal">
+                <li>Legal</li>
+                <li>
+                    <a href="/polls">Terms of service</a>
+                </li>
+                <li>
+                    <a href="/polls">Orivacy policy</a>
+                </li>
+            </ur>
+
+            <ur class="index" id="help">
+                <li>Help center</li>
+                <li>
+                    <a href="/polls">What is VPN and how does it work?</a>
+                </li>
+                <li>
+                    <a href="/polls">What can X-VPN actually do for me?</a>
+                </li>
+                <li>
+                    <a href="/polls">How to set up X-VPN?</a>
+                </li>
+                <li>
+                    <a href="/polls">Is X-VPN free to use?</a>
+                </li>
+                <li>
+                    <a href="/polls">More</a>
+                </li>
+            </ur>
+
+            <div class="cut-off-line"></div>
+
+            <div class="copyright">
+                © Free Connected Limited All Right Reserved
+            </div>
+        </div>
+    </div>
+
+<script src="/static/polls/swiper-3.4.2.min.js"></script>
+
+<script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'vertical',
+        autoplay: 2000,
+        loop: true,
+        speed: 2000,    
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplayDisableOnInteraction: false,
+        paginationBulletRender: function (swiper, index, className){
+            return '<span class="' + className + '">' + '</span>';
+        }
+    })
+
+    // var navBtn = document.getElementById('nav-normal');
+    // function navClick(){
+    //     navBtn.style.color = "#2DC9CA";
+    //     navBtn.style.borderBottom = "2px solid #2DC9CA";
+    // }
+
+    var titleList = ["#header-contain", "#download", "#customer-reviews", "#dont-miss-more", "#benefits"];
+    window.onload =function(){
+        var lis =document.querySelectorAll('ul li');
+        lis[0].querySelectorAll('a')[0].style.color = "#2DC9CA";
+        lis[0].style.borderBottom = "2px solid #2DC9CA";
+        var anonymous =function(i){
+            lis[i].onclick =function(){
+                for (var k = 0; k < (lis.length - 2); k++){
+                    if (k != i) {
+                    lis[k].querySelectorAll('a')[0].style.color = "black";
+                    lis[k].style.borderBottom = "0px solid #2DC9CA";                        
+                    } else {
+                        lis[k].querySelectorAll('a')[0].style.color = "#2DC9CA";
+                        lis[k].style.borderBottom = "2px solid #2DC9CA";
+                    }
+                }
+            window.location.hash = titleList[i];
+            };
+        };
+        for (var i = 0; i < (lis.length - 2); i++){
+            anonymous(i);
+        }
+    };
+
+    var nav = document.getElementById('header-content-pc');
+    var navFont = document.getElementById('nav-normal');
+    
+    window.addEventListener('scroll', winScroll);
+
+    function winScroll(e){
+        var scrollTop = document.body.scrollTop + document.documentElement.scrollTop;
+        
+        scrollTop < 30 ? nav.style.background=null : nav.style.background="white";
+
+        var lis2 = document.querySelectorAll('ul li a');
+        var anonmous2 = function(){
+            for (var k = 0; k < (lis2.length); k++){
+                var getStyle = window.getComputedStyle(lis2[k], null);
+                if (getStyle.color !== "rgb(45, 201, 202)"){
+                    lis2[k].style.color = "black";
+                }
+            }
+        }
+
+        var anonmous3 = function(){
+            for (var k = 0; k < (lis2.length); k++){
+                var getStyle = window.getComputedStyle(lis2[k], null);
+                if (getStyle.color !== "rgb(45, 201, 202)"){
+                    lis2[k].style.color = "white";
+                }
+            }
+        }
+
+        scrollTop < 30 ? anonmous3() : anonmous2();
+    }
+
+  </script>
+
+</body>
+</html>

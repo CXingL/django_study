@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load static %}
+<head><title>Regist</title>
+</head>
+<body>
+    <h1>regist</h1>
+    <form method = 'post'>
+            {% csrf_token %}
+            <input type="email" name="username" >
+            <input type="password" name="password" >
+            <input type="submit" value="sign up" ></a>
+    </form>
+</body>

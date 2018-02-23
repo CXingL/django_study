@@ -1,0 +1,119 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<style>
+
+
+</style>
+</head>
+
+<body>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+
+{% if latest_question_list %}
+    <url>
+    {% for question in latest_question_list %}
+        <li><a id="list" href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </url>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<br><p id="demo" style="display:none;"></p>
+<button onclick="displayDate()">显示时间</button><br>
+<p id="screen" style="display:none;"></br></p></br>
+<button onclick="newPage()">打开 w3school</button><br><br>
+<button onclick="checkCookie()">记录身份</button></br>
+<p style="display:none;">gift card:<input type="text" id="copyTest" value="thisisagiftcard"></p>
+<button onclick="copyGiftCard()">Copy</button></br></br>
+<div class="animation"></div>
+
+<script>
+
+    function checkCookie()
+    {
+        username = getCookie('username')
+        if (username != null && username != "")
+        {
+            alert('Welcome again ' + username + '!')
+        }
+        else
+        {
+            username =prompt('Please enter your name:', "")
+            if (username != null && username != "")
+            {
+                setCookie('username', username, 1)
+            }
+        }
+
+    }
+
+    function getCookie(c_name)
+    {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=")
+            if (c_start != -1)
+            {
+                c_start = c_start + c_name.length + 1
+                c_end = document.cookie.indexOf(";", c_start)
+                if (c_end == -1)
+                {
+                    c_end =document.cookie.length
+                }
+                return unescape(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ""
+    }
+
+    function setCookie(c_name, value, expiredays)
+    {
+        var exdate = new Date()
+        exdate.setDate(exdate.getDate() + expiredays)
+        document.cookie = c_name + "=" + escape(value) + ((expiredays==null) ? "" : "; expires=" + exdate.toGMTString())
+    }
+
+    function displayDate()
+    {
+        document.getElementById("demo").innerHTML=Date();
+    }
+
+    function newPage()
+    {
+        window.open("http://www.w3school.com.cn")
+    }
+
+    function copyGiftCard()
+    {
+        document.execCommand("Copy");
+    }
+
+    document.getElementById("list").style.color= "black";
+    document.getElementById("list").style.border= "2px solid green";
+    document.getElementById("screen").innerHTML="可用高度： " + screen.availHeight + " 可用宽度：" + screen.availWidth + "<br><br>" + location.href
+
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $ ("url li").eq(1).css("border", "2px solid black");
+    })
+
+    $(document).ready(function() {
+        $("p").css("background-color","lightgrey");
+        $("p").fadeIn(9000);
+    })
+
+    function copyGiftCard()
+    {
+        var Url12=document.getElementById("copyTest");
+        Url12.select();
+        document.execCommand("Copy");
+        alert("copy success");
+    }
+
+</script>
+</body>
+    
