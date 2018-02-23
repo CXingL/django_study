@@ -4,7 +4,7 @@ study python and django
 ### 运行
 clone 后进入 mysite 目录下执行：
 
-python manage.py runserver
+``python manage.py runserver``
 
 然后使用本机浏览器打开
 
